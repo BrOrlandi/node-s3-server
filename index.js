@@ -14,7 +14,14 @@ app.get('/', (req, res) => {
 });
 
 app.get('/test', (req, res) => {
-  res.send('<h1 style="text-align: center; margin-top: 30px;"><a href="/download/BLGjgheeDYFHspdQBVP3.mp4" download="BLGjgheeDYFHspdQBVP3.mp4">Download</a></h1>');
+  res.send(`
+    <h1 style="text-align: center; margin-top: 30px;">
+      <a href="/download/BLGjgheeDYFHspdQBVP3.mp4" download="BLGjgheeDYFHspdQBVP3.mp4">Download Node</a>
+    </h1>
+    <h1 style="text-align: center; margin-top: 30px;">
+      <a href="https://s3.amazonaws.com/star-wars-intros/BLGjgheeDYFHspdQBVP3.mp4" download="BLGjgheeDYFHspdQBVP3.mp4">Download S3</a>
+    </h1>
+  `);
 });
 
 app.get('/download/:name', (req, res) => {
