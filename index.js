@@ -29,6 +29,8 @@ app.get('/download/:name', (req, res) => {
   s3.getObject(options).createReadStream().pipe(res);
 });
 
-app.listen(3000, () => {
-  console.log('Node Server is listening');
+const port = process.env.PORT || 3000;
+
+app.listen(port, () => {
+  console.log('Node Server is listening port', port);
 });
