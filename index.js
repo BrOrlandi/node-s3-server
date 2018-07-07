@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/test', (req, res) => {
-  res.send('<a href="/download/BLGjgheeDYFHspdQBVP3.mp4">Download</a>');
+  res.send('<h1 style="text-align: center; margin-top: 30px;"><a href="/download/BLGjgheeDYFHspdQBVP3.mp4" download="BLGjgheeDYFHspdQBVP3.mp4">Download</a></h1>');
 });
 
 app.get('/download/:name', (req, res) => {
