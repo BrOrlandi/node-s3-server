@@ -13,6 +13,10 @@ app.get('/', (req, res) => {
   res.send('Hello!');
 });
 
+app.get('/test', (req, res) => {
+  res.send('<a href="/download/BLGjgheeDYFHspdQBVP3.mp4">Download</a>');
+});
+
 app.get('/download/:name', (req, res) => {
   const fileName = req.params.name;
   if (!fileName) {
